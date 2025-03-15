@@ -4,10 +4,10 @@ describe('Real World App', () => {
     cy.get('#username').type('Pepe.baba')
     cy.get('#password').type('123456789@')
     cy.get('button').click()
-    cy.get('.MuiListSubheader-root').contains('Public')
+    cy.get('.MuiListSubheader-sticky').contains('Public')
   })
 
-  it('Login - Success', () => {
+  it('Login - Fail', () => {
     cy.visit('http://localhost:3000/')
     cy.get('#username').type('Pepe.ba')
     cy.get('#password').type('123456')

@@ -8,7 +8,7 @@ describe('Real World App', () => {
     cy.get('#password').type('123456789@')
     cy.get('#confirmPassword').type('123456789@')
     cy.get('[tabindex="0"]').click()
-    });
+    })
 
     it('Registro - Fail', () => {
         cy.visit('http://localhost:3000/')
@@ -20,4 +20,4 @@ describe('Real World App', () => {
         cy.get('#confirmPassword').type('123')
         cy.get('#password-helper-text')
         });
-  });
+  })
