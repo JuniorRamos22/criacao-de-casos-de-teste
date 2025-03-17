@@ -1,0 +1,25 @@
+describe('Real World App', () => {
+    it.skip('histórico - Success', () => {
+     cy.visit('http://localhost:3000/')
+     cy.get('#username').type('Pepe.baba')
+     cy.get('#password').type('123456789@')
+     cy.get('button').click()
+     cy.get('.MuiListSubheader-sticky').contains('Public')
+     cy.get('.css-1idn90j-MuiGrid-root')
+     cy.get('.css-fl92m2').contains('Date: ALL')
+     cy.get('[data-test="transaction-item-J5Fd3dlBEBu"]')
+     cy.get('[data-test="transaction-item-Ec6hHyL6SC2F"]')
+     cy.get('.Mui-selected').click()
+     cy.get('.MuiGrid-grid-sm-true')
+    })
+
+    it('histórico - Fail', () => {
+      cy.visit('http://localhost:3000/')
+      cy.get('#username').type('Pepe.baba')
+      cy.get('#password').type('123456789@')
+      cy.get('button').click()
+      cy.get('.MuiListSubheader-sticky').contains('Public')
+      cy.get('.css-1idn90j-MuiGrid-root')
+      cy.get('.css-fl92m2').contains('Date: ALL')
+    })
+  })
